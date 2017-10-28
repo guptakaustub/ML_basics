@@ -15,7 +15,7 @@ def gradient_descent(m_cur, b_cur, learningRate):
     m_sum = 0
     b_sum = 0
 
-    # Getting Differential
+    # Evaluating Slope for every point in Space and Summing up
     for points in data:
         x = points[0]
         y = points[1]

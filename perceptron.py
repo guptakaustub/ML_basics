@@ -19,7 +19,7 @@ def error(w1, w2, b):
     e = 0
     for points in dataset:
         e += (points[2] - sigmoid(w1*points[0] + w2*points[1] + b)) ** 2
-    return e
+    return e/len(dataset)
 
 def gradient_descent(w1, w2, b, learningRate):
     cost_w1 = 0
@@ -31,6 +31,7 @@ def gradient_descent(w1, w2, b, learningRate):
         w_sum = (points[0] * w1) + (points[1] * w2 + b)
         # Cost Function
         cost = (sigmoid(w_sum) - points[2]) ** 2
+
         # Getting Partial Derivative of cost function w.r.t w1, w2, b
         # d(cost)/d(hypothesis) : hypothesis = 1/1 + sig(z)
         cost_h = 2 * (sigmoid(w_sum) - points[2])
