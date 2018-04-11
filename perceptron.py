@@ -30,7 +30,7 @@ def gradient_descent(w1, w2, b, learningRate):
         # Weighted Sum
         w_sum = (points[0] * w1) + (points[1] * w2 + b)
         # Cost Function
-        # cost = (sigmoid(w_sum) - points[2]) ** 2
+        cost = (sigmoid(w_sum) - points[2]) ** 2
 
         # Getting Partial Derivative of cost function w.r.t w1, w2, b
         # d(cost)/d(hypothesis) : hypothesis = 1/1 + sig(z)

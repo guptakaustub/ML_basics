@@ -25,7 +25,7 @@ class NeuralNet(object):
         # declaring epoch for training
         epoch = 100000
         for i in range(epoch):
-            print("Epoch: ", i+1)
+            print "Epoch: ", i+1
             # getting derivatives wrt to all weights in network
             # Matrix Equations of derivatives from Welch's Lab
             # dJ/dW2
@@ -62,11 +62,9 @@ y_sample = array([
     [0]
 ])
 
-nn = NeuralNet([2,5,1])
+nn = NeuralNet([2,3,1])
 # print nn.feedforward([0,1])
 nn.backpropagate(x_sample,y_sample)
-print(nn.W1)
-print(nn.W2)
-# for i in nn.feedforward(x_sample):
-#     print(round(i))
-print(nn.feedforward(x_sample))
+print nn.W1
+print nn.W2
+print nn.feedforward(x_sample)
